@@ -1,0 +1,6 @@
+1. Eu consigo criar uma subconsulta com base em uma condição:
+SELECT * FROM (SELECT * FROM alunos WHERE alunos.status = 1) al;
+1.1. Cláusula WITH:
+- Para fins de legibilidade, é possível mudar a posição da subconsulta e criar antes do própria query principal a instância:
+WITH al AS (SELECT * FROM alunos WHERE alunos.status = 1) -- Declarando al
+SELECT * from al;
